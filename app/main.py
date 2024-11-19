@@ -12,7 +12,7 @@ start_scheduler()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Cambia esto según tu frontend
+    allow_origins=["https://testjulian.softdesarrolladores.com"],  # Cambia esto según tu frontend
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
