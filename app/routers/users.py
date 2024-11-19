@@ -70,6 +70,6 @@ def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db:
         value=access_token,
         httponly=True,
         secure=True,
-        sameSite='None'
+        samesite="None"
     )
     return {"access_token": access_token, "token_type": "bearer", "user": user}
