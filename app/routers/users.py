@@ -69,6 +69,7 @@ def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db:
         key="access_token",
         value=access_token,
         httponly=True,
-        secure=True,  # Usa HTTPS en producción
+        secure: True, // Requiere HTTPS
+        sameSite: 'None', // Permite solicitudes cross-site
     )
     return {"access_token": access_token, "token_type": "bearer", "user": user}
